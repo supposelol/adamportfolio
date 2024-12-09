@@ -1,0 +1,81 @@
+/* Grid Layout */
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 -10rem;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 7 / 11;
+    position: relative;
+}
+
+.div2 {
+    grid-area: 5 / 2 / 9 / 4;
+}
+
+.div3 {
+    grid-area: 5 / 5 / 9 / 7;
+}
+
+.div4 {
+    grid-area: 5 / 8 / 9 / 10;
+}
+
+.div5 {
+    grid-area: 2 / 4 / 4 / 8;
+}
+
+.div6 {
+    grid-area: 3 / 4 / 5 / 8;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Images */
+
+
+.carousel-image {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+h1 {
+    font-size: 3.5rem;
+    /* Very large size for h1 */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* Smaller but still prominent for h2 */
+    font-weight: semi-bold;
+}
+
+/* Active Carousel Image */
+
+
+/* Keyframes for carousel rotation */
+
+
+/* Animation for carousel */

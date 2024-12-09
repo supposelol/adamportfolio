@@ -1,0 +1,42 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(128, 128, 128, 0.2), gray, rgba(128, 128, 128, 0.2));
+    border-image-slice: 1;
+    margin-left: -10rem;
+    width: calc(100% + 20rem);
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-options a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: gray;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-options a:hover {
+    color: black;
+}
+
+.navbar-bottom-line {
+    width: 100vw;
+    height: 1px;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.2), gray, rgba(128, 128, 128, 0.2));
+}
