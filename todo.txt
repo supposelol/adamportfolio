@@ -1,0 +1,25 @@
+NAVBAR
+    wider logo
+    navigating logic
+
+LANDING
+    carousel arrows
+    change carousel pics
+    fill out cards
+
+ABOUT
+    real text
+
+PHOTO GALLERY
+    more pages
+
+CONTACT
+    change name card
+    function logic
+
+FOOTER
+    IG YT FB cool buttons
+    change text
+
+RESPONSIVE :<
+LAZY LOADING OMG

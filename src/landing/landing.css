@@ -1,5 +1,4 @@
 /* Grid Layout */
-
 .parent {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -12,47 +11,61 @@
 .div1 {
     grid-area: 1 / 1 / 7 / 11;
     position: relative;
-}
-
-.div2 {
-    grid-area: 5 / 2 / 9 / 4;
-}
-
-.div3 {
-    grid-area: 5 / 5 / 9 / 7;
-}
-
-.div4 {
-    grid-area: 5 / 8 / 9 / 10;
-}
-
-.div5 {
-    grid-area: 2 / 4 / 4 / 8;
-}
-
-.div6 {
-    grid-area: 3 / 4 / 5 / 8;
+    overflow: hidden; /* Ensures images stay within the carousel */
+    z-index: 11;
+    height: 64vh;
 }
 
 /* Card Styles */
+.div2 {
+    grid-area: 6 / 2 / 9 / 4;
+    z-index: 11;
+}
+
+.div3 {
+    grid-area: 6 / 5 / 9 / 7;
+    z-index: 11;
+}
+
+.div4 {
+    grid-area: 6 / 8 / 9 / 10;
+    z-index: 11;
+}
+
+.div5 {
+    grid-area: 3 / 4 / 5 / 8;
+    z-index: 11;
+}
+
+.div6 {
+    grid-area: 4 / 4 / 6 / 8;
+    z-index: 11;
+}
+
 .card {
-    background-color: white;
+    background: linear-gradient(to bottom, white, rgb(241, 241, 241));
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -16px 16px rgba(0, 0, 0, 0.1);
+    z-index: 11;
 }
 
-/* Carousel Images */
-
-
+/* Carousel Styles */
 .carousel-image {
-    display: block;
+    position: absolute; /* Stack all images on top of each other */
     width: 100%;
-    max-height: 70vh;
+    max-height: 64vh;
     object-fit: cover;
-    position: relative;
-    z-index: -1;
+    opacity: 0; /* Fully transparent by default */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+    z-index: 0; /* Stack behind the active image */
 }
 
+.carousel-image.active {
+    opacity: 1; /* Fully visible */
+    z-index: 1; /* Stack in front */
+}
+
+/* Headings */
 h1,
 h2 {
     text-align: center;
@@ -62,20 +75,10 @@ h2 {
 
 h1 {
     font-size: 3.5rem;
-    /* Very large size for h1 */
     font-weight: bold;
 }
 
 h2 {
     font-size: 1.5rem;
-    /* Smaller but still prominent for h2 */
     font-weight: semi-bold;
 }
-
-/* Active Carousel Image */
-
-
-/* Keyframes for carousel rotation */
-
-
-/* Animation for carousel */

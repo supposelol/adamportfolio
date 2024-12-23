@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    margin: 0 -10rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 2rem;
+}
+
+.footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px; /* Ensures a good layout on smaller screens */
+}
+
+.footer-contact h4, .footer-social h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.footer-contact p, .footer-social a {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+}
+
+.footer-social a:hover {
+    color: rgb(243, 205, 126); /* Highlight color on hover */
+}
+
+.footer-social a {
+    display: block; /* Places each social link on a new line */
+}

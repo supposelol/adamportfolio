@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 2;
+    z-index: 22;
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(to right, rgba(128, 128, 128, 0.2), gray, rgba(128, 128, 128, 0.2));
     border-image-slice: 1;
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10rem;
+    padding: 0 20rem;
 }
 
 .logo img {
@@ -26,13 +26,13 @@
 .nav-options a {
     margin-left: 20px;
     text-decoration: none;
-    color: gray;
     font-size: 1rem;
     transition: color 0.3s ease;
+    color: black;
 }
 
 .nav-options a:hover {
-    color: black;
+    color: gray;
 }
 
 .navbar-bottom-line {

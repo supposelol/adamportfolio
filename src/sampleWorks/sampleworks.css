@@ -1,0 +1,72 @@
+.sample-works {
+    padding: 2rem;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(237, 237, 237);
+}
+
+.category-title {
+    font-size: 1.4rem;
+    color: #e7a007;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 4rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    row-gap: 3rem;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
+.grid-image {
+    width: 68%;
+    height: 324px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.grid-image:hover {
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal styles */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-modal-content {
+    position: relative;
+    display: inline-block;
+}
+
+/* Modal image styles */
+.image-modal-content img {
+    max-width: 90vh;
+    max-height: 90vh;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+    transition: none; 
+}
