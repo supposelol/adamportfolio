@@ -1,6 +1,6 @@
 NAVBAR
     wider logo
-    navigating logic
+    navigation logic
 
 LANDING
     carousel arrows
