@@ -1,34 +1,110 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import './contact.css';
-import nameCardImage from '../assets/nameCard.png'; // Path to your name card image
+import nameCardImage from '../assets/nameCard.png';
 
 const Contact = () => {
+    const formRef = useRef();
+    const [formData, setFormData] = useState({
+        user_name: '',
+        user_email: '',
+        user_phone: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_1jyortf',
+            'template_9pn6gfl',
+            formRef.current,
+            '70gERZ062Mh-dvhpG'
+        )
+        .then((result) => {
+            alert("Message Sent Successfully!");
+            setFormData({
+                user_name: '',
+                user_email: '',
+                user_phone: '',
+                subject: '',
+                message: ''
+            });
+        }, (error) => {
+            alert("An error occurred, please try again later.");
+            console.error('Error sending email:', error);
+        });
+    };
+
     return (
         <div className="contact-section">
             <div className="contact-form">
-                <h3 className="contact-title">Vedd fel velem a kapcsolatot!</h3>
-                <form className="form">
+                <h3 className="contact-title">Get in Touch</h3>
+                <form className="form" ref={formRef} onSubmit={sendEmail}>
                     <div className="form-group">
-                        <label htmlFor="name" className='formText'>Név</label>
-                        <input type="text" id="name" name="name" required />
+                        <label htmlFor="user_name" className='formText'>Name</label>
+                        <input
+                            type="text"
+                            id="user_name"
+                            name="user_name"
+                            value={formData.user_name}
+                            onChange={handleInputChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email" className='formText'>Email</label>
-                        <input type="email" id="email" name="email" required />
+                        <label htmlFor="user_email" className='formText'>Email</label>
+                        <input
+                            type="email"
+                            id="user_email"
+                            name="user_email"
+                            value={formData.user_email}
+                            onChange={handleInputChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="phone" className='formText'>Mobil</label>
-                        <input type="text" id="phone" name="phone" required />
+                        <label htmlFor="user_phone" className='formText'>Phone</label>
+                        <input
+                            type="text"
+                            id="user_phone"
+                            name="user_phone"
+                            value={formData.user_phone}
+                            onChange={handleInputChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="subject" className='formText'>Téma</label>
-                        <input type="text" id="subject" name="subject" required />
+                        <label htmlFor="subject" className='formText'>Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleInputChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="message" className='formText'>Üzenet</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label htmlFor="message" className='formText'>Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                        ></textarea>
                     </div>
-                    <button type="submit" className="submit-btn">Küldés</button>
+                    <button type="submit" className="submit-btn">Send</button>
                 </form>
             </div>
             <div className="contact-image">

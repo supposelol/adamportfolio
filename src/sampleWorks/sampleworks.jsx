@@ -1,8 +1,6 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './sampleWorks.css';
 
-// Import the images you want to display
 import portrait1 from '../assets/portrait/IMG_2684.jpeg';
 import portrait2 from '../assets/portrait/IMG_2696.jpeg';
 import portrait3 from '../assets/portrait/IMG_2745.jpeg';
@@ -38,70 +36,90 @@ import work15 from '../assets/carousel6.jpg';
 import work16 from '../assets/carousel7.jpg';
 
 const SampleWorks = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
+const [currentIndex, setCurrentIndex] = useState(null);
+const [images, setImages] = useState([]);
 
-    const handleImageClick = (imageSrc) => {
-        setSelectedImage(imageSrc);
-    };
+const portraits = [
+    portrait1, portrait2, portrait3, portrait4, portrait5, portrait6,
+    portrait7, portrait8, portrait9, portrait10, portrait11, portrait12,
+    portrait13, portrait14, portrait15, portrait16,
+];
+  
+const works = [
+    work1, work2, work3, work4, work5, work6, work7, work8,
+    work9, work10, work11, work12, work13, work14, work15, work16,
+];
 
-    const closeImage = () => {
-        setSelectedImage(null);
-    };
-    return (
-        <div className="sample-works">
-            <h4 className="section-title">Photo Gallery</h4>
-            <div className="works-category">
-                <h3 className="category-title">Portraits</h3>
-                <div className="image-grid">
-                    <img src={portrait1} alt="Portrait 1" className="grid-image" onClick={() => handleImageClick(portrait1)}/>
-                    <img src={portrait2} alt="Portrait 2" className="grid-image" onClick={() => handleImageClick(portrait2)} />
-                    <img src={portrait3} alt="Portrait 3" className="grid-image" onClick={() => handleImageClick(portrait3)}/>
-                    <img src={portrait4} alt="Portrait 4" className="grid-image" onClick={() => handleImageClick(portrait4)}/>
-                    <img src={portrait5} alt="Portrait 5" className="grid-image" onClick={() => handleImageClick(portrait5)}/>
-                    <img src={portrait6} alt="Portrait 6" className="grid-image" onClick={() => handleImageClick(portrait6)}/>
-                    <img src={portrait7} alt="Portrait 7" className="grid-image" onClick={() => handleImageClick(portrait7)}/>
-                    <img src={portrait8} alt="Portrait 8" className="grid-image" onClick={() => handleImageClick(portrait8)}/>
-                    <img src={portrait9} alt="Portrait 9" className="grid-image" onClick={() => handleImageClick(portrait9)}/>
-                    <img src={portrait10} alt="Portrait 10" className="grid-image" onClick={() => handleImageClick(portrait10)}/>
-                    <img src={portrait11} alt="Portrait 11" className="grid-image" onClick={() => handleImageClick(portrait11)}/>
-                    <img src={portrait12} alt="Portrait 12" className="grid-image" onClick={() => handleImageClick(portrait12)}/>
-                    <img src={portrait13} alt="Portrait 13" className="grid-image" onClick={() => handleImageClick(portrait13)}/>
-                    <img src={portrait14} alt="Portrait 14" className="grid-image" onClick={() => handleImageClick(portrait14)}/>
-                    <img src={portrait15} alt="Portrait 15" className="grid-image" onClick={() => handleImageClick(portrait15)}/>
-                    <img src={portrait16} alt="Portrait 16" className="grid-image" onClick={() => handleImageClick(portrait16)}/>
-                </div>
-            </div>
+const handleImageClick = (imageArray, index) => {
+    setImages(imageArray);
+    setCurrentIndex(index);
+};
 
-            <div className="works-category">
-                <h3 className="category-title paddingtop">Other works</h3>
-                <div className="image-grid">
-                    <img src={work1} alt="Work 1" className="grid-image" onClick={() => handleImageClick(work1)}/>
-                    <img src={work2} alt="Work 2" className="grid-image" onClick={() => handleImageClick(work2)}/>
-                    <img src={work3} alt="Work 3" className="grid-image" onClick={() => handleImageClick(work3)}/>
-                    <img src={work4} alt="Work 4" className="grid-image" onClick={() => handleImageClick(work4)}/>
-                    <img src={work5} alt="Work 5" className="grid-image" onClick={() => handleImageClick(work5)}/>
-                    <img src={work6} alt="Work 6" className="grid-image" onClick={() => handleImageClick(work6)}/>
-                    <img src={work7} alt="Work 7" className="grid-image" onClick={() => handleImageClick(work7)}/>
-                    <img src={work8} alt="Work 8" className="grid-image" onClick={() => handleImageClick(work8)}/>
-                    <img src={work9} alt="Work 9" className="grid-image" onClick={() => handleImageClick(work9)}/>
-                    <img src={work10} alt="Work 10" className="grid-image" onClick={() => handleImageClick(work10)} />
-                    <img src={work11} alt="Work 11" className="grid-image" onClick={() => handleImageClick(work11)} />
-                    <img src={work12} alt="Work 12" className="grid-image" onClick={() => handleImageClick(work12)} />
-                    <img src={work13} alt="Work 13" className="grid-image" onClick={() => handleImageClick(work13)} />
-                    <img src={work14} alt="Work 14" className="grid-image" onClick={() => handleImageClick(work14)} />
-                    <img src={work15} alt="Work 15" className="grid-image" onClick={() => handleImageClick(work15)} />
-                    <img src={work16} alt="Work 16" className="grid-image" onClick={() => handleImageClick(work16)} />
-                </div>
-            </div>
-            {selectedImage && (
-                <div className="image-modal" onClick={closeImage}>
-                    <div className="image-modal-content">
-                        <img src={selectedImage} alt="Zoomed" />
-                    </div>
-                </div>
-            )}
+const closeImage = () => {
+    setCurrentIndex(null);
+};
+
+const handleOverlayClick = (e) => {
+    const screenWidth = window.innerWidth;
+    const clickPosition = e.clientX;
+
+    if (clickPosition < screenWidth / 2) {
+      // Left side click - go to the previous image
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    } else {
+      // Right side click - go to the next image
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }
+};
+
+return (
+    <div className="sample-works">
+      <h4 className="section-title">Photo Gallery</h4>
+
+      <div className="works-category">
+        <h3 className="category-title">Portraits</h3>
+        <div className="image-grid">
+          {portraits.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Portrait ${index + 1}`}
+              className="grid-image"
+              onClick={() => handleImageClick(portraits, index)}
+            />
+          ))}
         </div>
-    );
+      </div>
+
+      <div className="works-category">
+        <h3 className="category-title">Other works</h3>
+        <div className="image-grid">
+          {works.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Work ${index + 1}`}
+              className="grid-image"
+              onClick={() => handleImageClick(works, index)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {currentIndex !== null && (
+        <div className="image-modal" onClick={handleOverlayClick}>
+          <div className="image-modal-content">
+            <img src={images[currentIndex]} alt="Zoomed" />
+          </div>
+          <button className="button" onClick={(e) => { e.stopPropagation(); closeImage(); }}>
+            <span className="X"></span>
+            <span className="Y"></span>
+            <span className="close">Close</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default SampleWorks;
