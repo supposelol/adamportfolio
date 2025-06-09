@@ -19,6 +19,9 @@ function App() {
           <Route path="/sampleworks" element={<SampleWorks />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <About />
+        <SampleWorks />
+        <Contact />
         <Footer />
       </div>
     </Router>

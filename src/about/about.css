@@ -61,6 +61,10 @@
     border-radius: 2px;
 }
 
+.about-text a {
+    text-decoration: none;
+    color: inherit; /* Optional: keep link color same as surrounding text */
+  }
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-content {

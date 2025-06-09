@@ -43,24 +43,34 @@ const Landing = () => {
             </div>
 
             {/* Cards (div2, div3, div4) */}
-            <div className="div2">
-                <div className="card">
-                    <h4>Card 1 Content</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sunt distinctio esse aut quo sint, quia eveniet explicabo magni atque.</p>
-                </div>
-            </div>
-            <div className="div3">
-                <div className="card">
-                    <h4>Card 2 Content</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sunt distinctio esse aut quo sint, quia eveniet explicabo magni atque.</p>
-                </div>
-            </div>
-            <div className="div4">
-                <div className="card">
-                    <h4>Card 3 Content</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sunt distinctio esse aut quo sint, quia eveniet explicabo magni atque.</p>
-                </div>
-            </div>
+<div className="div2">
+    <div className="card">
+        <h4>Photography</h4>
+        <p>
+            I like keeping things natural and real, 
+            whether it’s a personal shoot, a couple, or just a scene that feels worth capturing.
+        </p>
+    </div>
+</div>
+<div className="div3">
+    <div className="card">
+        <h4>Videography</h4>
+        <p>
+            I fly drones and edit everything myself. 
+            The final result ends up on TikTok, Instagram, or wherever you scroll. 
+        </p>
+    </div>
+</div>
+<div className="div4">
+    <div className="card">
+        <h4>Vlog</h4>
+        <p>
+            I make travel vlogs across the US, mixing real-life moments with creative shots. 
+            Road trips, good energy and no fakeness. 
+        </p>
+    </div>
+</div>
+
 
             {/* Texts (div5, div6) */}
             <div className="div5">

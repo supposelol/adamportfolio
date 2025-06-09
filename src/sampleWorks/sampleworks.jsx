@@ -74,7 +74,7 @@ const handleOverlayClick = (e) => {
 
 return (
     <div className="sample-works">
-      <h4 className="section-title">Photo Gallery</h4>
+      <h4 className="section-title">Recent Work</h4>
 
       <div className="works-category">
         <h3 className="category-title">Portraits</h3>
@@ -92,7 +92,7 @@ return (
       </div>
 
       <div className="works-category">
-        <h3 className="category-title">Other works</h3>
+        <h3 className="category-title">Landscape</h3>
         <div className="image-grid">
           {works.map((src, index) => (
             <img
