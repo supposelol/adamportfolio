@@ -1,5 +1,5 @@
 .about-section {
-    padding: 3rem 7rem 8rem; 
+    padding: 3rem 7rem 8rem;
 }
 
 .about-content {
@@ -8,20 +8,22 @@
     justify-content: space-between;
     gap: 2rem;
     text-align: left;
-    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    flex-wrap: wrap;
+    /* Allows stacking on smaller screens */
 }
 
 .about-texts {
     flex: 1;
-    min-width: 300px; /* Ensure proper scaling */
+    min-width: 300px;
+    /* Ensure proper scaling */
 }
 
 .about-image {
     flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 300px; /* Prevents shrinking too much */
-    
+    min-width: 300px;
+    /* Prevents shrinking too much */
 }
 
 .about-image img {
@@ -29,8 +31,10 @@
     max-width: 400px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), /* Larger shadow */
-                0 6px 12px rgba(0, 0, 0, 0.2);    /* Softer bottom shadow */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4),
+        /* Larger shadow */
+        0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Softer bottom shadow */
 }
 
 .about-title {
@@ -47,11 +51,24 @@
     margin: 0;
 }
 
-.about-text {
+.about-links {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0 !important;
+    padding-left: 1rem;
+}
+
+.about-intro {
     font-size: 1.25rem;
     color: #333;
     line-height: 1.8;
-    margin-bottom: 2rem;
+}
+
+.about-email {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0 0 2rem 0;
+    padding-left: 1rem;
 }
 
 .about-line {
@@ -61,27 +78,45 @@
     border-radius: 2px;
 }
 
-.about-text a {
+.about-links a {
     text-decoration: none;
-    color: inherit; /* Optional: keep link color same as surrounding text */
-  }
-/* Responsive Design */
+    color: inherit;
+
+}
+
+.about-email a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.social-icon {
+    font-size: 1.75rem;
+    vertical-align: middle;
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .about-texts, .about-image {
-        flex: none; /* Ensure stacking properly */
+    .about-texts,
+    .about-image {
+        flex: none;
+        /* Ensure stacking properly */
         width: 100%;
     }
 
     .about-image img {
-        max-width: 80%; /* Reduce image size for small screens */
+        max-width: 80%;
+        /* Reduce image size for small screens */
     }
 
     .about-section {
-        padding: 2rem 1rem; /* Smaller padding for smaller devices */
+        padding: 2rem 1rem;
+        /* Smaller padding for smaller devices */
     }
 }
