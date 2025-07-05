@@ -15,7 +15,6 @@
 .about-texts {
     flex: 1;
     min-width: 300px;
-    /* Ensure proper scaling */
 }
 
 .about-image {
@@ -23,7 +22,6 @@
     display: flex;
     justify-content: center;
     min-width: 300px;
-    /* Prevents shrinking too much */
 }
 
 .about-image img {
@@ -118,5 +116,8 @@
     .about-section {
         padding: 2rem 1rem;
         /* Smaller padding for smaller devices */
+    }
+    .about-texts p {
+        font-size: 1rem;
     }
 }

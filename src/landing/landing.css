@@ -2,44 +2,43 @@
 .parent {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: auto auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 -10rem;
 }
 
 .div1 {
-    grid-area: 1 / 1 / 7 / 11;
+    grid-area: 1 / 1 / span 1 / span 10;
     position: relative;
-    overflow: hidden; /* Ensures images stay within the carousel */
+    overflow: hidden;
     z-index: 11;
     height: 64vh;
 }
 
-/* Card Styles */
-.div2 {
-    grid-area: 6 / 2 / 9 / 4;
+/* Cards Container */
+.cards-container {
+    grid-area: 2 / 2 / span 1 / span 8;
     z-index: 11;
-}
-
-.div3 {
-    grid-area: 6 / 5 / 9 / 7;
-    z-index: 11;
-}
-
-.div4 {
-    grid-area: 6 / 8 / 9 / 10;
-    z-index: 11;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Increased from 20px to 40px for desktop */
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
 
 .div5 {
-    grid-area: 3 / 4 / 5 / 8;
+    grid-area: 1 / 4 / span 1 / span 4;
     z-index: 11;
+    align-self: center;
+    margin-top: 20px;
 }
 
 .div6 {
-    grid-area: 4 / 4 / 6 / 8;
+    grid-area: 1 / 4 / span 1 / span 4;
     z-index: 11;
+    align-self: center;
+    margin-top: 100px;
 }
 
 .card {
@@ -51,18 +50,18 @@
 
 /* Carousel Styles */
 .carousel-image {
-    position: absolute; /* Stack all images on top of each other */
+    position: absolute;
     width: 100%;
     max-height: 64vh;
     object-fit: cover;
-    opacity: 0; /* Fully transparent by default */
-    transition: opacity 1s ease-in-out; /* Smooth transition */
-    z-index: 0; /* Stack behind the active image */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
 }
 
 .carousel-image.active {
-    opacity: 1; /* Fully visible */
-    z-index: 1; /* Stack in front */
+    opacity: 1;
+    z-index: 1;
 }
 
 /* Headings */
@@ -81,4 +80,62 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: semi-bold;
+}
+
+h5 {
+    font-size: 1.25rem;
+font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0.75rem;
+    text-shadow: 0.5px 0.5px 1px #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Tablet size */
+    .parent {
+        margin: 0 -2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Keep original gap for tablet/mobile */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .div1 {
+        height: 50vh;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile size */
+    .parent {
+        margin: 0 -1rem;
+    }
+    
+    .div5 {
+        grid-area: 1 / 2 / span 1 / span 8;
+    }
+    
+    .div6 {
+        grid-area: 1 / 2 / span 1 / span 8;
+        margin-top: 80px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
 }

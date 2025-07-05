@@ -1,49 +1,94 @@
-footer {
-    display: flex;
-    margin: 0 -10rem;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+.footer-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: rgb(31, 31, 31);
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
     color: white;
-    text-align: left;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 80%;
-    max-width: 1200px;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Center columns horizontally */
+    align-items: flex-start; /* Align columns to the same top */
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
+/* Columns with fixed width */
 .footer-contact, .footer-social {
-    flex: 1;
-    min-width: 200px; /* Ensures a good layout on smaller screens */
+    width: 250px; /* Fixed width for all columns */
+    text-align: left; /* Left-align text content */
 }
 
+/* Font styles */
 .footer-contact h4, .footer-social h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-left: 1rem;
+    color: rgb(243, 205, 126);
 }
 
 .footer-contact p, .footer-social a {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     font-size: 1rem;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin-left: 1rem;
+    display: block;
 }
 
 .footer-social a:hover {
-    color: rgb(243, 205, 126); /* Highlight color on hover */
+    color: rgb(243, 205, 126);
 }
 
-.footer-social a {
-    display: block; /* Places each social link on a new line */
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+    .footer-contact, .footer-social {
+        width: 220px;
+    }
+    .footer-contact h4, .footer-social h4 {
+        font-size: 1.1rem;
+    }
+    .footer-contact p, .footer-social a {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .footer-contact, .footer-social {
+        width: 100%;
+        max-width: 250px;
+    }
+    .footer-contact h4, .footer-social h4 {
+        font-size: 1rem;
+    }
+    .footer-contact p, .footer-social a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .footer-contact h4, .footer-social h4 {
+        font-size: 0.95rem;
+    }
+    .footer-contact p, .footer-social a {
+        font-size: 0.85rem;
+    }
+    footer {
+        padding: 1.5rem 1rem;
+    }
 }
