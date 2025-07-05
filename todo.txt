@@ -1,13 +1,13 @@
 NAVBAR
     wider logo
-    navigation logic
+   x navigation logic
 
 LANDING
-    carousel arrows
-    change carousel pics
+   - carousel arrows
+   ? change carousel pics
    x fill out cards 
 
-ABOUT
+x ABOUT
    x real text
 
 PHOTO GALLERY
@@ -15,11 +15,12 @@ PHOTO GALLERY
 
 CONTACT
    x change name card
-    function logic
+    function logic  
 
 FOOTER
-    IG YT FB cool buttons
-    change text
+    IG YT tiktok cool buttons
+   x change text
 
-RESPONSIVE :<
-LAZY LOADING OMG
+x RESPONSIVE :<
+x LAZY LOADING OMG
+real links 

@@ -43,6 +43,7 @@ const Contact = () => {
     };
 
     return (
+        <section id="contact">
         <div className="contact-section">
             <div className="contact-form">
                 <h3 className="contact-title">Get in Touch</h3>
@@ -83,6 +84,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
+        </section>
     );
 };
 

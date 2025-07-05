@@ -5,6 +5,7 @@ import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const About = () => {
     return (
+        <section id="About">
         <div className="about-section">
             <div className="about-content">
                 <div className="about-texts">
@@ -31,6 +32,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

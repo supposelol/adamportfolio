@@ -16,6 +16,7 @@ const Landing = () => {
     }, []);
 
     return (
+        <section id="home">
         <div className="parent">
             {/* Carousel Images (div1) */}
             <div className="div1">
@@ -74,6 +75,7 @@ const Landing = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 }
 

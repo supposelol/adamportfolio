@@ -1,42 +1,212 @@
+/* ===== Navbar Styles ===== */
 .navbar {
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     background-color: white;
     z-index: 22;
     border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, rgba(128, 128, 128, 0.2), gray, rgba(128, 128, 128, 0.2));
+    border-image: linear-gradient(to right, rgba(217, 183, 102, 0.2), #d9b766, rgba(217, 183, 102, 0.2));
     border-image-slice: 1;
-    margin-left: -10rem;
-    width: calc(100% + 20rem);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
-
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+    max-width: 100%;
 }
 
+/* Logo */
 .logo img {
     height: 60px;
     object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-options {
+    display: flex;
+    transition: all 0.3s ease;
 }
 
 .nav-options a {
     margin-left: 20px;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
-    color: black;
+    color: #333;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    padding: 5px 0;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-options a:hover {
-    color: gray;
+    color: #d9b766;
+    transform: translateY(-2px);
 }
 
-.navbar-bottom-line {
-    width: 100vw;
-    height: 1px;
-    background: linear-gradient(to right, rgba(128, 128, 128, 0.2), gray, rgba(128, 128, 128, 0.2));
+/* Gold Underline Animation */
+.nav-options a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #d9b766, #f0d699);
+    transition: width 0.3s ease;
+}
+
+.nav-options a:hover::after {
+    width: 100%;
+}
+
+/* Active Link */
+.nav-options a.active {
+    color: #d9b766;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Logo Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.logo:hover img {
+    animation: pulse 1.5s infinite;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 2rem;
+    }
+
+    .nav-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(217, 183, 102, 0.2);
+        transform: translateY(-150%);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .nav-options.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .nav-options a {
+        margin: 12px 0;
+        padding: 8px 20px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .nav-options a:hover {
+        background-color: rgba(217, 183, 102, 0.1);
+        transform: translateX(5px);
+        color: #d9b766;
+    }
+
+    .nav-options a::after {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .hamburger-line {
+        background-color: #d9b766;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* ===== Responsive Padding ===== */
+@media (min-width: 1920px) {
+    .navbar-container {
+        padding: 0 15rem;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .navbar-container {
+        padding: 0 10rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .navbar-container {
+        padding: 0 5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .navbar-container {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
 }

@@ -102,6 +102,7 @@ const SampleWorks = () => {
   };
 
   return (
+    <section id="gallery">
     <div className="sample-works">
       <div className="works-category">
         <h4 className="category-title">Portraits</h4>
@@ -160,6 +161,7 @@ const SampleWorks = () => {
         </div>
       )}
     </div>
+    </section>
   );
 };
 
