@@ -156,7 +156,7 @@ const SampleWorks = () => {
           <button className="button" onClick={(e) => { e.stopPropagation(); closeImage(); }}>
             <span className="X"></span>
             <span className="Y"></span>
-            <span className="close">Close</span>
+            <span className="close"></span>
           </button>
         </div>
       )}
