@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './sampleWorks.css';
+import './sampleworks.css';
 
 import portrait1 from '../assets/portrait/IMG_2684.jpeg';
 import portrait2 from '../assets/portrait/IMG_2696.jpeg';
