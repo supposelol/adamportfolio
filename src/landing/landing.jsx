@@ -43,33 +43,32 @@ const Landing = () => {
             </div>
 
             {/* Cards (div2, div3, div4) */}
-<div className="div2">
-    <div className="card">
-        <h4>Photography</h4>
-        <p>
-            I like keeping things natural and real, 
-            whether it’s a personal shoot, a couple, or just a scene that feels worth capturing.
-        </p>
-    </div>
-</div>
-<div className="div3">
-    <div className="card">
-        <h4>Videography</h4>
-        <p>
-            I fly drones and edit everything myself. 
-            The final result ends up on TikTok, Instagram, or wherever you scroll. 
-        </p>
-    </div>
-</div>
-<div className="div4">
-    <div className="card">
-        <h4>Vlog</h4>
-        <p>
-            I make travel vlogs across the US, mixing real-life moments with creative shots. 
-            Road trips, good energy and no fakeness. 
-        </p>
-    </div>
-</div>
+            <div className="div2">
+                <div className="card">
+                    <h4>Photography</h4>
+                    <p>
+                        This is the field in which I currently have the most experience,
+                        so I can confidently say that I can find a solution for anything, no matter what photography topic it is.
+                    </p>
+                </div>
+            </div>
+            <div className="div3">
+                <div className="card">
+                    <h4>Videography</h4>
+                    <p>
+                        Just like with photography, this is a field where the final result and the feedback after delivering the work matter the most.
+                    </p>
+                </div>
+            </div>
+            <div className="div4">
+                <div className="card">
+                    <h4>Vlog</h4>
+                    <p>
+                        I make travel vlogs across the US, mixing real-life moments with creative shots.
+                        Road trips, good energy and no fakeness.
+                    </p>
+                </div>
+            </div>
 
 
             {/* Texts (div5, div6) */}

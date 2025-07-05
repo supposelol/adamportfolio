@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import './contact.css';
-import nameCardImage from '../assets/nameCard.png';
 
 const Contact = () => {
     const formRef = useRef();
@@ -35,8 +34,6 @@ const Contact = () => {
             setFormData({
                 user_name: '',
                 user_email: '',
-                user_phone: '',
-                subject: '',
                 message: ''
             });
         }, (error) => {
@@ -51,7 +48,7 @@ const Contact = () => {
                 <h3 className="contact-title">Get in Touch</h3>
                 <form className="form" ref={formRef} onSubmit={sendEmail}>
                     <div className="form-group">
-                        <label htmlFor="user_name" className='formText'>Name</label>
+                        <label htmlFor="user_name" className="formText">Name</label>
                         <input
                             type="text"
                             id="user_name"
@@ -62,7 +59,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="user_email" className='formText'>Email</label>
+                        <label htmlFor="user_email" className="formText">Email</label>
                         <input
                             type="email"
                             id="user_email"
@@ -73,29 +70,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="user_phone" className='formText'>Phone</label>
-                        <input
-                            type="text"
-                            id="user_phone"
-                            name="user_phone"
-                            value={formData.user_phone}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="subject" className='formText'>Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message" className='formText'>Message</label>
+                        <label htmlFor="message" className="formText">Message</label>
                         <textarea
                             id="message"
                             name="message"
@@ -106,9 +81,6 @@ const Contact = () => {
                     </div>
                     <button type="submit" className="submit-btn">Send</button>
                 </form>
-            </div>
-            <div className="contact-image">
-                <img src={nameCardImage} alt="Name Card" />
             </div>
         </div>
     );

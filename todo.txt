@@ -5,16 +5,16 @@ NAVBAR
 LANDING
     carousel arrows
     change carousel pics
-    fill out cards
+   x fill out cards 
 
 ABOUT
-    real text
+   x real text
 
 PHOTO GALLERY
     more pages
 
 CONTACT
-    change name card
+   x change name card
     function logic
 
 FOOTER

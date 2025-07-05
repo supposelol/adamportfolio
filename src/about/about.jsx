@@ -11,8 +11,9 @@ const About = () => {
                     <h3 className="about-title">Introduction</h3>
                     <h4 className="about-header">Hey, I'm Adam</h4>
                     <p className="about-intro">
-                        I take photos, fly drones, make vlogs, and turn it all into videos on Instagram, TikTok, and YouTube.
-                        I’m based in Lubbock, Texas and open to work in the area and nearby. Whether it’s a portrait shoot or a collab, feel free to reach out.
+                        I work in photography and videography. I take portraits, cover events, create drone footage, and shoot promo videos.
+                        I also turn moments into content for Instagram, TikTok, and YouTube. I’m based in Lubbock, Texas and open to work in the area and nearby.
+                         Whether it is a portrait session, a brand shoot, or a full video production, feel free to reach out.
                     </p>
                     <p className="about-links">
                         Find me on&nbsp;

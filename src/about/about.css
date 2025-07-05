@@ -39,7 +39,7 @@
 
 .about-title {
     font-size: 1.2rem;
-    color: #f3cd7e;
+    color: #d9b766;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -73,7 +73,7 @@
 
 .about-line {
     height: 3px;
-    background-color: #f3cd7e;
+    background-color: #d9b766;
     margin: 0 auto;
     border-radius: 2px;
 }
