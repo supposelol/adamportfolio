@@ -101,7 +101,7 @@
     animation: pulse 1.5s infinite;
 }
 
-/* ===== Mobile Styles ===== */
+/* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-container {
         padding: 0 2rem;
@@ -173,7 +173,6 @@
     }
 }
 
-/* ===== Responsive Padding ===== */
 @media (min-width: 1920px) {
     .navbar-container {
         padding: 0 15rem;

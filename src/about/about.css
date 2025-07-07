@@ -9,7 +9,6 @@
     gap: 2rem;
     text-align: left;
     flex-wrap: wrap;
-    /* Allows stacking on smaller screens */
 }
 
 .about-texts {
@@ -98,24 +97,20 @@
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
-        text-align: center;
     }
 
     .about-texts,
     .about-image {
         flex: none;
-        /* Ensure stacking properly */
         width: 100%;
     }
 
     .about-image img {
         max-width: 80%;
-        /* Reduce image size for small screens */
     }
 
     .about-section {
         padding: 2rem 1rem;
-        /* Smaller padding for smaller devices */
     }
     .about-texts p {
         font-size: 1rem;

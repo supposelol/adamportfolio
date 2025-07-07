@@ -10,7 +10,7 @@ const Landing = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImage((prevImage) => (prevImage + 1) % 4); // Change image every 3 seconds
+            setCurrentImage((prevImage) => (prevImage + 1) % 4); // Change image every 8 seconds
         }, 8000);
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []);
@@ -70,7 +70,7 @@ const Landing = () => {
                     <h5>Vlog</h5>
                     <p>
                         I make travel vlogs across the US, mixing real-life moments with creative shots.
-                        Road trips, good energy and no fakeness.
+                        Road trips, good energy and no phoniness.
                     </p>
                 </div>
             </div>

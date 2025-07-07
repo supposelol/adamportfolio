@@ -9,23 +9,24 @@ const Footer = () => {
                     <div className="footer-contact">
                         <div className="footer-column-content">
                             <h4>Contact</h4>
-                            <p>+36(30) 526 6840</p>
-                            <p>info@tamasraczphoto.hu</p>
+                            <p>(806)790-8270</p>
+                            <p>Vajda.adam22@gmail.com</p>
                         </div>
                     </div>
                     <div className="footer-contact">
                         <div className="footer-column-content">
                             <h4>Mailing Address</h4>
-                            <p>4254 Nyíradony</p>
-                            <p>Galamb utca 18.</p>
+                            <p>79382 Wolffroth </p>
+                            <p>202 Sooner St.</p>
                         </div>
                     </div>
                     <div className="footer-social">
                         <div className="footer-column-content">
                             <h4>Find Me Here</h4>
-                            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                             <a href="https://instagram.com/adam22_photography" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://tiktok.com/@vajdaadam" target="_blank" rel="noopener noreferrer">Tiktok</a>
+                            <a href="https://www.youtube.com/@adamvajda1499" target="_blank" rel="noopener noreferrer">YouTube</a>
+                            <a href="https://www.facebook.com/profile.php?id=61568310343350" target="_blank" rel="noopener noreferrer">Facebook</a>
                         </div>
                     </div>
                 </div>

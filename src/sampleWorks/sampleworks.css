@@ -137,22 +137,13 @@
   transform: rotate(-45deg);
 }
 
-.close {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.button:hover .close {
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .image-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   
   .grid-image {
-    height: 250px; /* Slightly less tall on mobile */
+    height: 250px; 
   }
   
   .category-title {

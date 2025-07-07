@@ -17,16 +17,16 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: center; /* Center columns horizontally */
-    align-items: flex-start; /* Align columns to the same top */
+    justify-content: center; 
+    align-items: flex-start; 
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 /* Columns with fixed width */
 .footer-contact, .footer-social {
-    width: 250px; /* Fixed width for all columns */
-    text-align: left; /* Left-align text content */
+    width: 250px;
+    text-align: left; 
 }
 
 /* Font styles */
@@ -50,7 +50,6 @@ footer {
     color: rgb(243, 205, 126);
 }
 
-/* Responsive adjustments */
 @media (max-width: 1023px) {
     .footer-contact, .footer-social {
         width: 220px;
