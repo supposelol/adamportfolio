@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [
     react(),
     viteStaticCopy({
-  targets: [
-    { src: 'netlify-form.html', dest: '' }  
-  ]
-})
+      targets: [
+        { src: 'netlify-form.html', dest: '' }
+      ]
+    })
   ],
   build: {
-    outDir: 'dist', // Explicitly set output directory (optional)
+    outDir: 'dist',
   }
 });
